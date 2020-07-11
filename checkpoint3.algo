@@ -1,0 +1,75 @@
+PROCEDURE dot_product (VAR ps : INTEGER)
+VAR
+    v1 : ARRAY_OF INTEGER[y];
+    v2 : ARRAY_OF INTEGER[z];
+    i : INTEGER ;
+BEGIN
+    write(y) ;
+    write(z) ;
+    i :=0 ;
+    ps:= 0;
+    REPEAT
+     ps+=v1[i]+v2[i] ;
+     i++ ;
+     UNTIL (i < y) 
+END
+
+
+
+ALGORITHM product
+VAR
+   v1 : ARRAY_OF INTEGER[y];
+    v2 : ARRAY_OF INTEGER[z];
+BEGIN
+    IF (y==z) THEN
+        IF (ps==0) THEN
+            write("The dot product of two orthogonal vectors is zero")
+        ELSE
+            write("The dot product of two not orthogonal ")
+
+        END_IF
+    ELSE
+        write("the two vectors are not equal ")
+    END_IF
+END
+
+/********************************************************************************/
+// version en fonction 
+
+FUNCTION dot_product() : INTEGER
+VAR
+    ps : INTEGER ;
+    i : INTEGER ;
+BEGIN
+    i :=0 ;
+    ps:= 0;
+    REPEAT
+       
+     ps+=v1[i]+v2[i] ;
+     i++ ;
+     UNTIL (i < y) 
+     
+    RETURN ps ;
+END
+
+
+ALGORITHM product
+VAR
+   v1 : ARRAY_OF INTEGER[y];
+    v2 : ARRAY_OF INTEGER[z];
+    var x :INTEGER ;
+BEGIN
+ write(y) ;
+    write(z) ;
+ x:= dot_product() ;
+    IF (y==z) THEN
+        IF (x==0) THEN
+            write("The dot product of two orthogonal vectors is zero")
+        ELSE
+            write("The dot product of two not orthogonal ")
+
+        END_IF
+    ELSE
+        write("the two vectors are not equal ")
+    END_IF
+END
